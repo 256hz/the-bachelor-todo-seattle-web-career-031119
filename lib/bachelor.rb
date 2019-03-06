@@ -28,6 +28,7 @@ def count_contestants_by_hometown(data, hometown)
       grew_up_there += 1 if person["hometown"] == hometown
     end
   end
+  grew_up_there
 end
 
 def get_occupation(data, hometown)
