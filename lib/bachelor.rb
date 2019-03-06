@@ -44,7 +44,7 @@ def get_average_age_for_season(data, season)
   season_ages = 0
   season_size = 0
   data.keys.each do |season|
-    puts season
+    puts "\n" + season
     data[season].each.with_index do |block, index|
       person = data[season][index]
       season_ages += person["age"].to_i
