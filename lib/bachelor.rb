@@ -12,9 +12,10 @@ end
 def get_contestant_name(data, occupation)
   data.keys.each do |season|
     data[season].each.with_index do |block, index|
-    person = data[season][index]
-    if person["occupation"] == occupation
-      return person["name"]
+      person = data[season][index]
+      if person["occupation"] == occupation
+        return person["name"]
+      end
     end
   end
 end
