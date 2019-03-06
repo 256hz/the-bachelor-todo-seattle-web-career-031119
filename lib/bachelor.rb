@@ -41,11 +41,12 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  season_ages = []
+  season_ages = 0
   data.keys.each do |season|
     data[season].each.with_index do |block, index|
       person = data[season][index]
-      season_ages >> person["age"].to_i
+      season_ages += person["age"].to_i
     end
   end
+  season_ages / data[season].keys.size
 end
