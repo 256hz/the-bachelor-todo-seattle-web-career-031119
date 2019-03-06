@@ -2,7 +2,7 @@ require 'pry'
 
 def get_first_name_of_season_winner(data, season)
   data[season].each do |contestant|
-    binding.pry
+    #binding.pry
     if data[season][contestant]["status"] == "Winner"
       return data[season][contestant]["name"].split(" ")[0]
     end
